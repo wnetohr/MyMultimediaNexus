@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>MyMultimediaNexus</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ECF0F1; /* cinza-claro */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #2C3E50; /* azul-profundo */
+            color: #ECF0F1; /* cinza-claro */
+            padding: 10px 0; /* Reduzir a altura do header */
+            border-bottom: #1ABC9C 3px solid; /* verde-esmeralda */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-left: 20px; /* Adicionar espaçamento à esquerda */
+            padding-right: 20px; /* Adicionar espaçamento à direita */
+        }
+        header a {
+            color: #ECF0F1; /* cinza-claro */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 14px; /* Diminuir levemente o tamanho das páginas de navegação */
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        header li {
+            display: inline;
+            padding: 0 15px; /* Ajustar o espaçamento */
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        #main {
+            padding: 20px;
+            background: #FFFFFF; /* branco */
+            margin-top: 20px;
+            text-align: center;
+        }
+        .btn {
+            display: inline-block;
+            color: #ECF0F1; /* cinza-claro */
+            background: #2C3E50; /* azul-profundo */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .btn:hover {
+            background: #1ABC9C; /* verde-esmeralda */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="branding">
+            <h1>MyMultimediaNexus</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/game-list.html">Games</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <section id="main">
+            <h1>Bem-vindo ao MyMultimediaNexus</h1>
+            <p>Explore e gerencie sua coleção de jogos de forma fácil e organizada.</p>
+            <a href="/game-list.html" class="btn">Ver Lista de Jogos</a>
+        </section>
+    </div>
+</body>
+</html>

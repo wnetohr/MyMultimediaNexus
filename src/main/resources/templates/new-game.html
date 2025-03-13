@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Adicionar Novo Jogo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ECF0F1; /* cinza-claro */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            flex: 1;
+        }
+        header {
+            background: #2C3E50; /* azul-profundo */
+            color: #ECF0F1; /* cinza-claro */
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #1ABC9C 3px solid; /* verde-esmeralda */
+        }
+        header a {
+            color: #ECF0F1; /* cinza-claro */
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            float: left;
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        #main {
+            padding: 20px;
+            background: #FFFFFF; /* branco */
+            margin-top: 20px;
+            position: relative;
+        }
+        form {
+            background: #FFFFFF; /* branco */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        form input[type="text"],
+        form input[type="number"],
+        form input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .form-actions {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            background: #FFFFFF; /* branco */
+            border-top: 1px solid #ddd;
+        }
+        .form-actions button,
+        .form-actions a {
+            display: inline-block;
+            color: #ECF0F1; /* cinza-claro */
+            background: #2C3E50; /* azul-profundo */
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        .form-actions button:hover,
+        .form-actions a:hover {
+            background: #1ABC9C; /* verde-esmeralda */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>MyMultimediaNexus</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/games/new">Adicionar Novo Jogo</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <section id="main">
+            <h1>Adicionar Novo Jogo</h1>
+            <form action="/games" method="post" id="gameForm">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" required>
+                <label for="genre">Gênero:</label>
+                <input type="text" id="genre" name="genre" required>
+                <label for="releaseYear">Ano de Lançamento:</label>
+                <input type="number" id="releaseYear" name="releaseYear" required>
+                <label for="developer">Desenvolvedor:</label>
+                <input type="text" id="developer" name="developer" required>
+            </form>
+        </section>
+    </div>
+    <div class="form-actions">
+        <a href="/" class="btn-back">Voltar</a>
+        <button type="submit" form="gameForm">Salvar</button>
+    </div>
+</body>
+</html>
