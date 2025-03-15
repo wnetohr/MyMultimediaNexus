@@ -60,4 +60,11 @@ public class FrontendController {
         gameService.deleteGame(id);
         return "redirect:/game-list.html";
     }
+
+    @GetMapping("/games/details/{id}")
+    public String gameDetails(@PathVariable Long id, Model model) {
+        Game game = gameService.getGameById(id).orElseThrow(() -> new RuntimeException("Game not found"));
+        model.addAttribute("game", game);
+        return "game-details";
+    }
 }

@@ -95,6 +95,17 @@
             display: flex;
             justify-content: flex-end;
         }
+        .game-name-link {
+            color: #1ABC9C; /* verde-esmeralda */
+            font-weight: bold;
+            text-decoration: none;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+        .game-name-link:hover {
+            color: #16A085; /* verde mais escuro */
+            text-decoration: underline;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 </head>
@@ -128,7 +139,9 @@
                 </thead>
                 <tbody>
                     <tr th:each="game : ${games}">
-                        <td th:text="${game.name}"></td>
+                        <td>
+                            <a th:href="@{/games/details/{id}(id=${game.id})}" th:text="${game.name}" class="game-name-link"></a> <!-- Nome estilizado -->
+                        </td>
                         <td th:text="${game.genre}"></td>
                         <td th:text="${game.releaseYear}"></td>
                         <td th:text="${game.developer}"></td>

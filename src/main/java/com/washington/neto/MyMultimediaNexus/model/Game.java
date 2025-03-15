@@ -16,6 +16,15 @@ public class Game {
     private String genre;
     private int releaseYear;
     private String developer;
+    private String review;
+    
+    public String getReview() {
+        return review;
+    }
+
+    public void setReview(String review) {
+        this.review = review;
+    }
 
     // Getters and Setters
     public Long getId() {
@@ -57,4 +66,5 @@ public class Game {
     public void setDeveloper(String developer) {
         this.developer = developer;
     }
+    
 }

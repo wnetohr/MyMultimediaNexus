@@ -41,6 +41,7 @@ public class GameService {
         game.setGenre(gameDetails.getGenre());
         game.setReleaseYear(gameDetails.getReleaseYear());
         game.setDeveloper(gameDetails.getDeveloper());
+        game.setReview(gameDetails.getReview());
         
         return gameRepository.save(game);
     }
